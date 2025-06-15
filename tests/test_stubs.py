@@ -53,7 +53,7 @@ from monkeytype.stubs import (
 )
 from monkeytype.tracing import CallTrace
 from monkeytype.typing import NoneType, make_typed_dict
-from mypy_extensions import TypedDict
+from typing_extensions import TypedDict
 from .util import Dummy
 
 UserId = NewType('UserId', int)
