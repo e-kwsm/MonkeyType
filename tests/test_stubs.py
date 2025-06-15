@@ -501,7 +501,7 @@ class TestReplaceTypedDictsWithStubs:
 
 
 typed_dict_import_map = ImportMap()
-typed_dict_import_map['mypy_extensions'] = {'TypedDict'}
+typed_dict_import_map['typing_extensions'] = {'TypedDict'}
 module_stub_for_method_with_typed_dict = {
     'tests.util': ModuleStub(
         function_stubs=(),
@@ -664,7 +664,7 @@ class TestModuleStub:
         )
         entries = [function]
         expected = '\n'.join([
-            'from mypy_extensions import TypedDict',
+            'from typing_extensions import TypedDict',
             '',
             '',
             'class FooTypedDict__RENAME_ME__(TypedDict):',
@@ -696,7 +696,7 @@ class TestModuleStub:
         )
         entries = [function]
         expected = '\n'.join([
-            'from mypy_extensions import TypedDict',
+            'from typing_extensions import TypedDict',
             '',
             '',
             'class DummyAnInstanceMethodTypedDict__RENAME_ME__(TypedDict):',
@@ -724,8 +724,8 @@ class TestModuleStub:
         )
         entries = [function]
         expected = '\n'.join([
-            'from mypy_extensions import TypedDict',
             'from typing import Generator',
+            'from typing_extensions import TypedDict',
             '',
             '',
             'class DummyAnInstanceMethodYieldTypedDict__RENAME_ME__(TypedDict):',
@@ -756,8 +756,8 @@ class TestModuleStub:
         )
         entries = [function]
         expected = '\n'.join([
-            'from mypy_extensions import TypedDict',
             'from typing import List',
+            'from typing_extensions import TypedDict',
             '',
             '',
             'class FooTypedDict__RENAME_ME__(TypedDict):',
@@ -782,7 +782,7 @@ class TestModuleStub:
         )
         entries = [function]
         expected = '\n'.join([
-            'from mypy_extensions import TypedDict',
+            'from typing_extensions import TypedDict',
             '',
             '',
             'class FooTypedDict__RENAME_ME__(TypedDict):',
