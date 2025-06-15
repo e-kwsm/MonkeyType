@@ -134,15 +134,15 @@ def strip_modules_helper(d1: Dummy, d2: Dummy) -> None:
     pass
 
 
-def has_optional_param(x: Optional[int] = None) -> None:
+def has_optional_param(x: int | None = None) -> None:
     pass
 
 
-def has_optional_union_param(x: Optional[Union[int, float]]) -> None:
+def has_optional_union_param(x: int | float | None) -> None:
     pass
 
 
-def has_optional_return() -> Optional[int]:
+def has_optional_return() -> int | None:
     return None
 
 
@@ -153,7 +153,7 @@ def default_none_parameter(x: int = None) -> None:
 def has_length_exceeds_120_chars(
     very_long_name_parameter_1: float,
     very_long_name_parameter_2: float
-) -> Optional[float]:
+) -> float | None:
     return None
 
 
@@ -161,7 +161,7 @@ def has_newtype_param(user_id: UserId) -> None:
     pass
 
 
-def has_forward_ref() -> Optional["TestFunctionStub"]:
+def has_forward_ref() -> "TestFunctionStub" | None:
     pass
 
 

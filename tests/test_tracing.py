@@ -45,7 +45,7 @@ def uses_kw_only_arg(a: int, *, b: int) -> int:
     return a + b
 
 
-def has_locals(foo: str) -> Optional[FrameType]:
+def has_locals(foo: str) -> FrameType | None:
         bar = 'baz'  # noqa - Needed to ensure non-argument locals are present in the returned frame
         return inspect.currentframe()
 
